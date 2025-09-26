@@ -4,36 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="title" content="Juma.K - Portfolio" />
+    <!-- Primary Meta Tags -->
+    <title>Juma Khan | Web Developer Portfolio</title>
+    <meta name="title" content="Juma Khan | Portfolio" />
     <meta
       name="description"
-      content="Juma Khan is a web developer specializing in Tailwind CSS, React, and Flask. Explore my projects and skills." />
+      content="Juma Khan is a web developer skilled in Tailwind CSS, React, and Flask. Explore my projects, skills, and contact me for collaboration." />
     <meta
       name="keywords"
-      content="web developer, Tailwind CSS, portfolio, React, Flask, frontend, backend, html, css" />
+      content="Juma Khan, web developer, Tailwind CSS, React, Flask, frontend, backend, portfolio" />
     <meta name="author" content="Juma Khan" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-portfolio-link.com/" />
+    <meta property="og:title" content="Juma Khan | Portfolio" />
+    <meta
+      property="og:description"
+      content="Web developer specializing in Tailwind CSS, React, and Flask. See my projects and skills." />
+    <meta property="og:image" content="./src/img/pic.jpg" />
+
+    <!-- LinkedIn -->
+    <meta property="og:site_name" content="Juma Khan Portfolio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css" />
-    <link rel="stylesheet" href="./src/output.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-    <title>Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
+  <body class="font-inter">
     <main
       class="max-w-screen border rounded-md m-4 bg-white bg-gradient-to-r from-slate-200 to-slate-300 text-slate-800">
       <header>
         <!-- Navigation -->
         <nav class="flex justify-between px-10 py-4 bg-slate-900">
           <div class="text-white text-2xl font-semibold">Juma.K</div>
-          <div class="text-white gap-3 hidden md:block">
-            <a href="#home" class="ml-2">Home</a>
-            <a href="#about" class="ml-2">About</a>
-            <a href="#skills" class="ml-2">Skills</a>
-            <a href="#projects" class="ml-2">Projects</a>
-            <a href="#contact" class="ml-2">Contact</a>
+          <div class="text-white gap-3 hidden md:flex">
+            <a href="#home" class="ml-2 hover:text-slate-400">Home</a>
+            <a href="#about" class="ml-2 hover:text-slate-400">About</a>
+            <a href="#skills" class="ml-2 hover:text-slate-400">Skills</a>
+            <a href="#projects" class="ml-2 hover:text-slate-400">Projects</a>
+            <a href="#contact" class="ml-2 hover:text-slate-400">Contact</a>
+          </div>
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-white">
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
         </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 text-white text-center">
+          <a href="#home" class="block py-2">Home</a>
+          <a href="#about" class="block py-2">About</a>
+          <a href="#skills" class="block py-2">Skills</a>
+          <a href="#projects" class="block py-2">Projects</a>
+          <a href="#contact" class="block py-2">Contact</a>
+        </div>
 
         <!-- Hero Section -->
         <section id="home" class="flex flex-col justify-center items-center text-center py-20">
@@ -43,14 +80,16 @@
               <p class="text-xl mb-5">I am a Front End Developer | Flask and React Learner</p>
             </div>
             <div class="mb-5">
-              <button
+              <a
+                href="#contact"
                 class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800 transition-all duration-200 cursor-pointer">
                 Hire Me
-              </button>
-              <button
+              </a>
+              <a
+                href="#projects"
                 class="ml-2 text-slate-700 p-3 border rounded-md hover:bg-slate-700 hover:text-white duration-200 cursor-pointer transition-all">
                 View My Work
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -76,7 +115,7 @@
       <!-- Skills Section -->
       <section id="skills" class="px-10 py-16">
         <h2 class="text-3xl font-semibold mb-8 text-center">My Skills</h2>
-        <div class="grid grid-cols-4 gap-3">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div
             class="flex flex-col justify-center items-center p-8 bg-slate-100 shadow-lg rounded-sm">
             <i class="fab fa-html5 text-8xl text-orange-600 mb-5"></i>
@@ -85,19 +124,19 @@
 
           <div
             class="flex flex-col justify-center items-center p-8 bg-slate-100 shadow-lg rounded-sm">
-            <i class="fab fa-css text-8xl text-blue-600 mb-5"></i>
+            <i class="fab fa-css3-alt text-8xl text-blue-600 mb-5"></i>
             <h2 class="font-semibold">CSS</h2>
           </div>
 
           <div
             class="flex flex-col justify-center items-center p-8 bg-slate-100 shadow-lg rounded-sm">
-            <i class="fab fab fa-js-square text-8xl text-yellow-400 mb-5"></i>
+            <i class="fab fa-js-square text-8xl text-yellow-400 mb-5"></i>
             <h2 class="font-semibold">JavaScript</h2>
           </div>
 
           <div
             class="flex flex-col justify-center items-center p-8 bg-slate-100 shadow-lg rounded-sm">
-            <i class="fab fab fa-bootstrap text-8xl text-purple-600 mb-5"></i>
+            <i class="fab fa-bootstrap text-8xl text-purple-600 mb-5"></i>
             <h2 class="font-semibold">Bootstrap</h2>
           </div>
 
@@ -106,8 +145,7 @@
             <img
               src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/tailwindcss.svg"
               alt="Tailwind CSS"
-              class="w-12 h-12 mb-5 text-blue-400" />
-
+              class="w-12 h-12 mb-5" />
             <h2 class="font-semibold">Tailwind CSS</h2>
           </div>
 
@@ -115,21 +153,21 @@
             class="flex flex-col justify-center items-center p-8 bg-slate-100 shadow-lg rounded-sm">
             <img
               src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/flask.svg"
-              alt="Tailwind CSS"
-              class="w-12 h-12 mb-5 text-blue-400" />
+              alt="Flask"
+              class="w-12 h-12 mb-5" />
             <h2 class="font-semibold">Flask</h2>
           </div>
 
           <div
             class="flex flex-col justify-center items-center p-8 bg-slate-100 shadow-lg rounded-sm">
             <i class="fab fa-react text-8xl text-sky-600 mb-5"></i>
-            <h2 class="font-semibold">Bootstrap</h2>
+            <h2 class="font-semibold">React</h2>
           </div>
 
           <div
             class="flex flex-col justify-center items-center p-8 bg-slate-100 shadow-lg rounded-sm">
             <i class="fab fa-github text-8xl text-gray-900 mb-5"></i>
-            <h2 class="font-semibold">Github</h2>
+            <h2 class="font-semibold">GitHub</h2>
           </div>
         </div>
       </section>
@@ -137,56 +175,92 @@
       <!-- Projects Section -->
       <section id="projects" class="px-10 py-16">
         <h2 class="text-3xl font-semibold mb-8 text-center">My Projects</h2>
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div
-            class="flex flex-col justify-center items-center rounded-lg shadow-lg bg-gray-100 p-4">
+            class="card flex flex-col justify-center items-center rounded-lg shadow-lg bg-gray-100 p-4 hover:scale-103 transition-all duration-300">
             <h2 class="text-xl font-bold mb-4">QR-Code Generator</h2>
             <img src="./src/img/first.png" alt="" class="mb-4" />
-            <div class="flex gap-3">
-              <a href="" class="text-white p-3 bg-slate-700 rounded-md">Live Demo</a>
-              <a href="" class="text-white p-3 bg-slate-700 rounded-md">Code</a>
+            <div class="flex gap-3 flex-wrap justify-center">
+              <a
+                href="https://shortcodes19.github.io/QR-Code-Generator/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800">
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/ShortCodes19/QR-Code-Generator"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800">
+                Code
+              </a>
             </div>
           </div>
 
           <div
-            class="flex flex-col justify-center items-center rounded-lg shadow-lg bg-gray-100 p-4">
+            class="flex flex-col justify-center items-center rounded-lg shadow-lg bg-gray-100 p-4 hover:scale-103 transition-all duration-300">
             <h2 class="text-xl font-bold mb-4">School Management System</h2>
             <img src="./src/img/second.png" alt="" class="mb-4" />
-            <div class="flex gap-3">
+            <div class="flex gap-3 flex-wrap justify-center">
               <a
                 href="https://juma22.pythonanywhere.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-white p-3 bg-slate-700 rounded-md">
+                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800">
                 Live Demo
               </a>
-              <a href="" class="text-white p-3 bg-slate-700 rounded-md">Code</a>
+              <a
+                href="https://github.com/ShortCodes19/School-Management-System-with-Flask-Bootstrap"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800">
+                Code
+              </a>
             </div>
           </div>
 
           <div
-            class="flex flex-col justify-center items-center rounded-lg shadow-lg bg-gray-100 p-4">
+            class="flex flex-col justify-center items-center rounded-lg shadow-lg bg-gray-100 p-4 hover:scale-103 transition-all duration-300">
             <h2 class="text-xl font-bold mb-4">Weather App</h2>
             <img src="./src/img/third.png" alt="weather app image" class="mb-4" />
-            <div class="flex gap-3">
+            <div class="flex gap-3 flex-wrap justify-center">
               <a
                 href="https://weather-app-shortcodes19.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-white p-3 bg-slate-700 rounded-md">
+                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800">
                 Live Demo
               </a>
-              <a href="" class="text-white p-3 bg-slate-700 rounded-md">Code</a>
+              <a
+                href="https://github.com/ShortCodes19/Weather-App"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800">
+                Code
+              </a>
             </div>
           </div>
 
           <div
-            class="flex flex-col justify-center items-center rounded-lg shadow-lg bg-gray-100 p-4">
-            <h2 class="text-xl font-bold mb-4">School Management System</h2>
-            <img src="./src/img/second.png" alt="" class="mb-4" />
-            <div class="flex gap-3">
-              <a href="" class="text-white p-3 bg-slate-700 rounded-md">Live Demo</a>
-              <a href="" class="text-white p-3 bg-slate-700 rounded-md">Code</a>
+            class="flex flex-col justify-center items-center rounded-lg shadow-lg bg-gray-100 p-4 hover:scale-103 transition-all duration-300">
+            <h2 class="text-xl font-bold mb-4">Random Qoute Generator</h2>
+            <img src="./src/img/fourth.png" alt="" class="mb-4" />
+            <div class="flex gap-3 flex-wrap justify-center">
+              <a
+                href="https://shortcodes19.github.io/Random-Quote-Generator/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800">
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/ShortCodes19/Random-Quote-Generator"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800">
+                Code
+              </a>
             </div>
           </div>
         </div>
@@ -194,15 +268,42 @@
 
       <!-- Contact Section -->
       <section id="contact" class="px-10 py-16">
-        <h2 class="text-3xl font-semibold mb-8 text-center">Contact</h2>
-        <div class="flex justify-center">
-          <p class="text-lg text-center">Your contact information goes here.</p>
+        <h2 class="text-3xl font-semibold mb-8 text-center">Get in Touch</h2>
+        <div class="flex gap-6 justify-center flex-wrap">
+          <a
+            href="https://www.linkedin.com/in/juma-khan-b0379028a/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="text-5xl fab fa-linkedin text-blue-600 hover:text-blue-800"></i>
+          </a>
+
+          <a href="https://github.com/ShortCodes19" target="_blank" rel="noopener noreferrer">
+            <i class="text-5xl fab fa-github hover:text-gray-700"></i>
+          </a>
+
+          <a href="mailto:jumak4863@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="text-5xl fas fa-envelope text-red-500 hover:text-red-700"></i>
+          </a>
         </div>
       </section>
 
-      <footer class="bg-slate-900 text-white text-center py-4">
+      <footer
+        class="flex flex-col md:flex-row justify-around bg-slate-900 text-white text-center py-4 gap-2">
         <p>&copy; 2025 Juma Khan. All rights reserved.</p>
+        <a href="#home">
+          <i class="fas fa-arrow-alt-circle-up text-2xl text-white hover:text-slate-400"></i>
+        </a>
       </footer>
     </main>
+
+    <!-- Mobile menu toggle -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
