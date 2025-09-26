@@ -28,6 +28,13 @@
     <!-- LinkedIn -->
     <meta property="og:site_name" content="Juma Khan Portfolio" />
     <meta property="og:locale" content="en_US" />
+    <meta property="linkedin:card" content="summary_large_image" />
+    <meta property="linkedin:url" content="https://your-portfolio-link.com/" />
+    <meta property="linkedin:title" content="Juma Khan | Portfolio" />
+    <meta
+      property="linkedin:description"
+      content="Web developer specializing in Tailwind CSS, React, and Flask. See my projects and skills." />
+    <meta property="linkedin:image" content="./src/img/pic.jpg" />
 
     <!-- Font Awesome -->
     <link
@@ -73,24 +80,29 @@
         </div>
 
         <!-- Hero Section -->
-        <section id="home" class="flex flex-col justify-center items-center text-center py-20">
-          <div class="px-10">
-            <div>
-              <h1 class="font-semibold text-5xl mb-2">Hi, I'm Juma Khan</h1>
-              <p class="text-xl mb-5">I am a Front End Developer | Flask and React Learner</p>
-            </div>
-            <div class="mb-5">
-              <a
-                href="#contact"
-                class="text-white p-3 bg-slate-700 rounded-md hover:bg-slate-800 transition-all duration-200 cursor-pointer">
-                Hire Me
-              </a>
-              <a
-                href="#projects"
-                class="ml-2 text-slate-700 p-3 border rounded-md hover:bg-slate-700 hover:text-white duration-200 cursor-pointer transition-all">
-                View My Work
-              </a>
-            </div>
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+          <h1 class="text-4xl md:text-5xl font-bold">
+            Hi, I'm
+            <span class="text-indigo-600">Juma Khan</span>
+          </h1>
+          <p class="mt-4 text-lg md:text-xl max-w-2xl">
+            A passionate
+            <span class="font-semibold text-indigo-500">Web Developer</span>
+            skilled in
+            <span class="font-semibold">HTML, CSS, JavaScript, Tailwind CSS, React, and Flask</span>
+            . I love turning ideas into functional, responsive, and beautiful digital experiences.
+          </p>
+          <div class="flex gap-4 mt-6">
+            <a
+              href="#projects"
+              class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 transition">
+              View My Work
+            </a>
+            <a
+              href="#contact"
+              class="px-6 py-3 border border-gray-400 text-gray-700 font-medium rounded-lg hover:bg-gray-100 transition">
+              Contact Me
+            </a>
           </div>
         </section>
       </header>
@@ -103,10 +115,21 @@
             <img src="./src/img/pic.jpg" class="w-full h-full object-cover" alt="Juma Khan" />
           </div>
           <div class="md:w-1/2 text-lg">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad quas, voluptatem totam,
-              fuga unde modi nesciunt obcaecati perferendis dicta nisi eum voluptatibus earum
-              laborum et sequi non qui cumque corporis?
+            <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+              I’m a self-taught developer with a strong foundation in
+              <span class="font-semibold text-gray-900">frontend and backend technologies</span>
+              . My expertise lies in creating responsive layouts with
+              <span class="text-indigo-500">Tailwind CSS</span>
+              , building interactive UIs with
+              <span class="text-indigo-500">React</span>
+              , and developing REST APIs using
+              <span class="text-indigo-500">Flask</span>
+              .
+            </p>
+            <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+              I enjoy problem-solving and project-based learning. My goal is to help clients bring
+              their ideas to life with clean, scalable, and efficient code — whether it's a
+              portfolio, a business website, or a full-stack web app.
             </p>
           </div>
         </div>
